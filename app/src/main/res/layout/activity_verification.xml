@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:background="#8D6E63"
+    android:padding="12dp">
+
+    <!-- الصورة: وزن 0.3 -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitCenter"
+        android:contentDescription="Passeport" />
+
+    <!-- الجزء النصي: وزن 0.7 -->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="@drawable/fond_billet"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_titre_passeport_xx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PASSEPORT TEMPOREL"
+            android:textColor="#3E2723"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_nom_xx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_titre_passeport_xx"
+            android:layout_marginTop="12dp"
+            android:textColor="#3E2723"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_age_xx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nom_xx"
+            android:layout_marginTop="8dp"
+            android:textColor="#3E2723"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_destination_xx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age_xx"
+            android:layout_marginTop="8dp"
+            android:textColor="#3E2723"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_motif_xx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_destination_xx"
+            android:layout_marginTop="8dp"
+            android:textColor="#3E2723"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_approuver_xx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_motif_xx"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_approuver" />
+
+        <Button
+            android:id="@+id/btn_refuser_xx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_approuver_xx"
+            android:text="@string/btn_refuser" />
+    </RelativeLayout>
+</LinearLayout>
