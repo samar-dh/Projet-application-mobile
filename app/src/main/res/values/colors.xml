@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fond_nuit">#1A1033</color>
+    <color name="or_temps">#FFC107</color>
+    <color name="violet_portail">#7C4DFF</color>
+    <color name="cyan_neon">#18FFFF</color>
+    <color name="blanc_champ">#FFFFFF</color>
 </resources>

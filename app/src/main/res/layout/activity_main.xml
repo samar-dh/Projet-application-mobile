@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/fond_nuit"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,76 +12,100 @@
         android:padding="24dp">
 
         <TextView
-            android:id="@+id/tv_titre_xx"
+            android:id="@+id/tv_XX_titre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:gravity="center"
-            android:text="@string/titre_formulaire"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+            android:text=" Douane Temporelle"
+            android:textColor="@color/or_temps"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/et_nom_xx"
+            android:id="@+id/et_XX_nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_nom"
-            android:inputType="textPersonName" />
+            android:layout_marginBottom="12dp"
+            android:background="@color/blanc_champ"
+            android:hint="Nom du voyageur"
+            android:inputType="textPersonName"
+            android:padding="14dp"
+            android:textColor="@color/fond_nuit"
+            android:textColorHint="#888888" />
 
         <EditText
-            android:id="@+id/et_naissance_xx"
+            android:id="@+id/et_XX_naissance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_naissance"
+            android:layout_marginBottom="12dp"
+            android:background="@color/blanc_champ"
+            android:hint="Année de naissance (ex: 2005)"
             android:inputType="number"
-            android:maxLength="4" />
+            android:maxLength="4"
+            android:padding="14dp"
+            android:textColor="@color/fond_nuit"
+            android:textColorHint="#888888" />
 
         <EditText
-            android:id="@+id/et_destination_xx"
+            android:id="@+id/et_XX_destination"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_destination"
+            android:background="@color/blanc_champ"
+            android:hint="Année de destination (ex: 2190)"
             android:inputType="number"
-            android:maxLength="4" />
+            android:maxLength="4"
+            android:padding="14dp"
+            android:textColor="@color/fond_nuit"
+            android:textColorHint="#888888" />
 
         <TextView
-            android:id="@+id/tv_label_motif_xx"
-            android:layout_width="match_parent"
+            android:id="@+id/tv_XX_motif"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/label_motif"
-            android:textSize="16sp" />
+            android:layout_marginTop="20dp"
+            android:text="Motif du voyage :"
+            android:textColor="@color/cyan_neon"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <RadioGroup
-            android:id="@+id/rg_motif_xx"
+            android:id="@+id/rg_XX_motif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/rb_tourisme_xx"
+                android:id="@+id/rb_XX_tourisme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/motif_tourisme" />
+                android:buttonTint="@color/or_temps"
+                android:text="@string/motif_tourisme"
+                android:textColor="@color/blanc_champ" />
 
             <RadioButton
-                android:id="@+id/rb_modif_passe_xx"
+                android:id="@+id/rb_XX_modification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/motif_modif_passe" />
+                android:buttonTint="@color/or_temps"
+                android:text="@string/motif_modification"
+                android:textColor="@color/blanc_champ" />
 
             <RadioButton
-                android:id="@+id/rb_fuite_xx"
+                android:id="@+id/rb_XX_fuite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/motif_fuite" />
+                android:buttonTint="@color/or_temps"
+                android:text="@string/motif_fuite"
+                android:textColor="@color/blanc_champ" />
         </RadioGroup>
 
         <Button
-            android:id="@+id/btn_inspecter_xx"
+            android:id="@+id/btn_XX_inspecter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/btn_inspecter" />
+            android:backgroundTint="@color/violet_portail"
+            android:text="Inspecter le profil"
+            android:textColor="@color/blanc_champ" />
     </LinearLayout>
 </ScrollView>
