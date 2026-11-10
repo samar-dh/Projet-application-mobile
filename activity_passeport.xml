@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A1033"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Houni 3malt espace lel interface w 7attitlou background bg_passport w padding men
+         kol jiha. -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_passport"
+            android:padding="18dp">
+
+            <!-- houni 7attit le titre principal "Passeport Temporel" fi west el écran, b police
+             kbira w Bold zeda. -->
+            <TextView
+                android:id="@+id/tv_titre_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:letterSpacing="0.08"
+                android:text="PASSEPORT\nTEMPOREL"
+                android:textColor="#FFC107"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- Houni 7attit sous-titre "Douane temporelle" ta7t el titre principal. -->
+            <TextView
+                android:id="@+id/tv_sous_titre_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_titre_xx"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:letterSpacing="0.3"
+                android:text="DOUANE TEMPORELLE"
+                android:textColor="#00E5FF"
+                android:textSize="12sp" />
+
+            <!--beh houni 3malt ligne violette bech njamou nfar9ou bin titre w ma3loumet
+             el passeport w yebda kol chy wadhah yaani-->
+            <View
+                android:id="@+id/ligne_xx"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_sous_titre_xx"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="#7C4DFF" />
+
+            <!-- Houni kol ma3louma 3andha titre sghir w ta7tou el valeur mte3ha, w zeda lktiba
+             hattitha fel weset (centrée)-->
+            <TextView
+                android:id="@+id/tv_label_nom_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ligne_xx"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="NOM DU VOYAGEUR"
+                android:textColor="#9E94C4"
+                android:textSize="12sp" />
+
+            <!-- Houni bech yet7at esm el voyageur b police kbira w Bold, w bel blanc fi
+            west el écran. -->
+            <TextView
+                android:id="@+id/tv_nom_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label_nom_xx"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Houni 7attit titre sghir ywarri elli el ma3louma elli ba3dou hiya el 3mor
+            temporel. -->
+            <TextView
+                android:id="@+id/tv_label_age_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nom_xx"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="ÂGE TEMPOREL"
+                android:textColor="#9E94C4"
+                android:textSize="12sp" />
+
+            <!-- Houni bech yet7at el 3mor temporel b police kbira w bold, w bel jaune. -->
+            <TextView
+                android:id="@+id/tv_age_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label_age_xx"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:textColor="#FFC107"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Houni 7attit titre sghir bech ywarri elli el ma3louma elli ba3dou hiya el
+            trajet. -->
+            <TextView
+                android:id="@+id/tv_label_trajet_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_age_xx"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="TRAJET"
+                android:textColor="#9E94C4"
+                android:textSize="12sp" />
+
+            <!-- Houni bech yet7at el trajet mta3 el voyageur bel blanc w fi west el écran. -->
+            <TextView
+                android:id="@+id/tv_trajet_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label_trajet_xx"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <!-- Houni 7attit titre sghir bech ywarri elli el ma3louma elli ba3dou hiya
+             motif el voyage. -->
+            <TextView
+                android:id="@+id/tv_label_motif_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_trajet_xx"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="MOTIF"
+                android:textColor="#9E94C4"
+                android:textSize="12sp" />
+
+            <!-- Houni bech yet7at motif el voyage b police kbira w Bold, w bel bleu. -->
+            <TextView
+                android:id="@+id/tv_motif_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label_motif_xx"
+                android:gravity="center"
+                android:textColor="#00E5FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Houni bech yodhhor message d'alerte idha ken fama risque wala mochkel, snn tkoun
+            masakra. -->
+            <TextView
+                android:id="@+id/tv_alerte_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_motif_xx"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="#FF5252"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- Houni 3malt bouton bech el utilisateur ynajjem maye9belech el saut temporel idha
+             ken fama risque de paradoxe. -->
+            <Button
+                android:id="@+id/btn_refuser_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="#D32F2F"
+                android:text="Refuser (Risque de paradoxe)"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- Houni 3malt bouton bech el utilisateur ynajjem y9bel el saut temporel. -->
+            <Button
+                android:id="@+id/btn_approuver_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btn_refuser_xx"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#7C4DFF"
+                android:text="Approuver le saut temporel"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- Houni bech yet7at code MRZ mta3 el passeport, b police monospace w fi
+             west el écran. -->            <TextView
+                android:id="@+id/tv_mrz_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btn_approuver_xx"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:textColor="#6F63A0"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
