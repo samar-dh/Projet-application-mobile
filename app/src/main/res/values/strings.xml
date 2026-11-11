@@ -3,4 +3,26 @@
     <string name="motif_tourisme">Tourisme</string>
     <string name="motif_modification">Modification du passé</string>
     <string name="motif_fuite">Fuite</string>
+
+    <!-- Activity Verification / Passeport -->
+    <string name="desc_photo_passeport">Photo de passeport</string>
+    <string name="titre_passeport">PASSEPORT\nTEMPOREL</string>
+    <string name="sous_titre_douane">DOUANE TEMPORELLE</string>
+    <string name="label_nom_voyageur">NOM DU VOYAGEUR</string>
+    <string name="label_age_temporel">ÂGE TEMPOREL</string>
+    <string name="label_trajet">TRAJET</string>
+    <string name="label_motif">MOTIF</string>
+    <string name="btn_refuser">Refuser (Risque de paradoxe)</string>
+    <string name="btn_approuver">Approuver le saut temporel</string>
+
+    <!-- Activity Result -->
+    <string name="btn_nouveau">Nouveau voyageur</string>
+
+    <!-- Activity Main -->
+    <string name="titre_douane_temporelle">Douane Temporelle</string>
+    <string name="hint_nom_voyageur">Nom du voyageur</string>
+    <string name="hint_annee_naissance">Année de naissance (ex: 2005)</string>
+    <string name="hint_annee_destination">Année de destination (ex: 2190)</string>
+    <string name="label_motif_voyage">Motif du voyage :</string>
+    <string name="btn_inspecter">Inspecter le profil</string>
 </resources>

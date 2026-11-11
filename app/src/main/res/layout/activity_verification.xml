@@ -1,87 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="1"
-    android:background="#8D6E63"
-    android:padding="12dp">
+    android:layout_height="match_parent">
 
-    <!-- الصورة: وزن 0.3 -->
-    <ImageView
-        android:layout_width="0dp"
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.3"
-        android:src="@mipmap/ic_launcher"
-        android:scaleType="fitCenter"
-        android:contentDescription="Passeport" />
+        android:background="#1A1033"
+        android:orientation="horizontal"
+        android:padding="12dp">
 
-    <!-- الجزء النصي: وزن 0.7 -->
-    <RelativeLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="0.7"
-        android:background="@drawable/fond_billet"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/tv_titre_passeport_xx"
+        <!-- هنا عملت مساحة للواجهة وحطيت لها الخلفية bg_passport مع مسافة من كل الجهات -->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PASSEPORT TEMPOREL"
-            android:textColor="#3E2723"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_passport"
+            android:padding="18dp">
 
-        <TextView
-            android:id="@+id/tv_nom_xx"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_titre_passeport_xx"
-            android:layout_marginTop="12dp"
-            android:textColor="#3E2723"
-            android:textSize="16sp" />
+            <!-- هذا العنوان الكبير "Passeport Temporel" في وسط الشاشة، بخط كبير وغليظ -->
+            <TextView
+                android:id="@+id/tv_titre_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:letterSpacing="0.08"
+                android:text="PASSEPORT\nTEMPOREL"
+                android:textColor="#FFC107"
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_age_xx"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_nom_xx"
-            android:layout_marginTop="8dp"
-            android:textColor="#3E2723"
-            android:textSize="16sp" />
+            <!-- العنوان الصغير "Douane temporelle" حطيته تحت العنوان الكبير -->
+            <TextView
+                android:id="@+id/tv_sous_titre_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_titre_xx"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:letterSpacing="0.3"
+                android:text="DOUANE TEMPORELLE"
+                android:textColor="#00E5FF"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/tv_destination_xx"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_age_xx"
-            android:layout_marginTop="8dp"
-            android:textColor="#3E2723"
-            android:textSize="16sp" />
+            <!-- خط بنفسجي باش نفرق بين العنوان ومعلومات الجواز ويولي كل شيء أوضح -->
+            <View
+                android:id="@+id/ligne_xx"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_sous_titre_xx"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="#7C4DFF" />
 
-        <TextView
-            android:id="@+id/tv_motif_xx"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_destination_xx"
-            android:layout_marginTop="8dp"
-            android:textColor="#3E2723"
-            android:textSize="16sp" />
+            <!-- كل معلومة عندها عنوان صغير فوقها وقيمتها تحتها، وكل النصوص في الوسط، وهذا عنوان الاسم -->
+            <TextView
+                android:id="@+id/tv_label_nom_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ligne_xx"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="NOM DU VOYAGEUR"
+                android:textColor="#9E94C4"
+                android:textSize="12sp" />
 
-        <Button
-            android:id="@+id/btn_approuver_xx"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_motif_xx"
-            android:layout_marginTop="20dp"
-            android:text="@string/btn_approuver" />
+            <!-- هنا يظهر اسم المسافر بخط كبير وغليظ وباللون الأبيض في الوسط -->
+            <TextView
+                android:id="@+id/tv_nom_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label_nom_xx"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_refuser_xx"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btn_approuver_xx"
-            android:text="@string/btn_refuser" />
-    </RelativeLayout>
+            <!-- عنوان صغير يعلم أن المعلومة اللي بعده هي العمر الزمني -->
+            <TextView
+                android:id="@+id/tv_label_age_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nom_xx"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="ÂGE TEMPOREL"
+                android:textColor="#9E94C4"
+                android:textSize="12sp" />
+
+            <!-- هنا يظهر العمر الزمني بخط كبير وغليظ وباللون الأصفر -->
+            <TextView
+                android:id="@+id/tv_age_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label_age_xx"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:textColor="#FFC107"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- عنوان صغير يعلم أن المعلومة اللي بعده هي مسار السفر -->
+            <TextView
+                android:id="@+id/tv_label_trajet_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_age_xx"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="TRAJET"
+                android:textColor="#9E94C4"
+                android:textSize="12sp" />
+
+            <!-- هنا يتكتب مسار المسافر باللون الأبيض وفي الوسط -->
+            <TextView
+                android:id="@+id/tv_trajet_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label_trajet_xx"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <!-- عنوان صغير يعلم أن المعلومة اللي بعده هي سبب السفر -->
+            <TextView
+                android:id="@+id/tv_label_motif_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_trajet_xx"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="MOTIF"
+                android:textColor="#9E94C4"
+                android:textSize="12sp" />
+
+            <!-- هنا يتكتب سبب السفر بخط كبير وغليظ وباللون الأزرق الفاتح -->
+            <TextView
+                android:id="@+id/tv_motif_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label_motif_xx"
+                android:gravity="center"
+                android:textColor="#00E5FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- رسالة تنبيه حمراء تظهر فقط إذا كان فيه خطر أو مشكل، وإلا تبقى مخفية -->
+            <TextView
+                android:id="@+id/tv_alerte_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_motif_xx"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="#FF5252"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- زر الرفض: يستعمله المستخدم إذا كان فيه خطر مفارقة زمنية ويريد منع القفزة -->
+            <Button
+                android:id="@+id/btn_refuser_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="#D32F2F"
+                android:text="Refuser (Risque de paradoxe)"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- زر الموافقة: يستعمله المستخدم باش يقبل القفزة الزمنية -->
+            <Button
+                android:id="@+id/btn_approuver_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btn_refuser_xx"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#7C4DFF"
+                android:text="Approuver le saut temporel"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- هنا يتحط كود MRZ الخاص بالجواز بخط monospace وفي الوسط -->
+            <TextView
+                android:id="@+id/tv_mrz_xx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btn_approuver_xx"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:textColor="#6F63A0"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

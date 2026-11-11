@@ -7,4 +7,6 @@
     <color name="violet_portail">#7C4DFF</color>
     <color name="cyan_neon">#18FFFF</color>
     <color name="blanc_champ">#FFFFFF</color>
+    <color name="vert_approuve">#2E7D32</color>
+    <color name="rouge_refuse">#C62828</color>
 </resources>

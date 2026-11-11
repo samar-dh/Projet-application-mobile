@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- الواجهة كلها LinearLayout عمودي، وأعطيته id باش نبدل لون الخلفية من الجافا -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout_racine_xx"
+    android:id="@+id/ll_racine_xx"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/vert_approuve"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="24dp">
 
+    <!-- أيقونة كبيرة فوق الرسالة، نبدلها من الجافا حسب الحكم -->
+    <TextView
+        android:id="@+id/tv_icone_xx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="✔"
+        android:textColor="#FFFFFF"
+        android:textSize="90sp" />
+
+    <!-- هنا تظهر الرسالة المخصصة للمسافر، والنص يتحط من الجافا -->
     <TextView
         android:id="@+id/tv_message_xx"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
+        android:textStyle="bold" />
 
+    <!-- زر مسافر جديد باش نرجع للصفحة الأولى ونبدأ من جديد -->
     <Button
         android:id="@+id/btn_nouveau_xx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_nouveau" />
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FFFFFF"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="Nouveau voyageur"
+        android:textColor="#1A1033"
+        android:textStyle="bold" />
 </LinearLayout>

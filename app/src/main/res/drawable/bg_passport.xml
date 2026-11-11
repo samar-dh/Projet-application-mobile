@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- هذا الملف هو خلفية الجواز: مستطيل بنفسجي غامق بحواف مدورة -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- لون داخل الجواز -->
+    <solid android:color="#2A1B54" />
+
+    <!-- إطار أصفر رفيع حول الجواز -->
+    <stroke
+        android:width="3dp"
+        android:color="#FFC107" />
+
+    <!-- زوايا مدورة باش يشبه الجواز الحقيقي -->
+    <corners android:radius="16dp" />
+</shape>
